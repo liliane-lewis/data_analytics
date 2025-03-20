@@ -68,11 +68,11 @@ def play():
         player_input(player)
         if check_win():
             display_board(pieces)
-            print(f"Parabéns! O jogador {player} venceu!")
+            print(f"Congratulations! The player {player} won!")
             break
         if check_draw():
             display_board(pieces)
-            print("Empate! O tabuleiro está cheio.")
+            print("Draw! The board is full.")
             break
         player = "O" if player == "X" else "X" 
 
