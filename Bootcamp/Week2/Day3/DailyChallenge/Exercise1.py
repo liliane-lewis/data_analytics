@@ -1,20 +1,36 @@
 #!/usr/bin/python3
-#Instructions
+
+# Daily challenge : Advanced Algorithm
+
+# Instructions
+
+#Here is a python code that generates a list of 20000 random numbers, called list_of_numbers, and a target number.
+
+#import random
+
+#list_of_numbers = [random.randint(0, 10000) for _ in range(20000)]
 #
-#    Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after 
-#    sorting them alphabetically.
-#    Use List Comprehension
+#target_number   = 3728
 #
-#Example:
+#
+#Copy this code, and create a program that finds, within list_of_numbers all the pairs of number that sum to the target 
+# number
+#
+#For example
+#
+#1000 and 2728 sums to the target_number 3728
+#1864 and 1864 sums to the target_number 3728
 
-#Suppose the following input is supplied to the program: without,hello,bag,world
-#Then, the output should be: bag,hello,without,world
+import random
 
+list_of_numbers = [random.randint(0, 10000) for _ in range(20000)]
 
-def sort_words(words):
-    words_sorted = ",".join(sorted([word.strip() for word in words.split(",")]))
-    return words_sorted
+target_number   = 3728
 
-words = "without,hello,bag,world"
+seen_numbers = set()
 
-print(sort_words(words))
+for num in list_of_numbers:
+    diff = target_number - num
+    if diff in seen_numbers:
+      print(f"{num} and {diff} sums to the target_number {target_number}")
+    seen_numbers.add(num)
