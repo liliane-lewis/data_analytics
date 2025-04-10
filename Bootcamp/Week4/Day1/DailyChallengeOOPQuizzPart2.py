@@ -38,5 +38,9 @@ class DeckofCards:
 
 
 deck = DeckofCards()
-print(deck.deal()) 
+print(deck.deal()) #get a card
+print(len(deck.cards)) 
+print(deck.deal()) #get a card
+print(len(deck.cards)) 
+print(deck.deal()) #get a card
 print(len(deck.cards)) 
