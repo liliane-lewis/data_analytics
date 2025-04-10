@@ -1,0 +1,25 @@
+Part 1 : Quizz :
+
+Answer the following questions
+
+    * What is a class?
+    Classes are an abstration used to create new user-defined data structures that contain arbitrary information about 
+    something in the real world. 
+    * What is an instance?
+    An instance is a copy of the class with actual values
+    * What is encapsulation?
+    Encapsulation is to restrict access to methods and variables to prevent data from direct modification
+    * What is abstraction?
+    Abstraction is the concept of hiding the complex implementation details and showing only the essential features of an object.
+    * What is inheritance?
+    Inheritance is a way by which a subclass can inherit the attributes and methods of another class.
+    * What is multiple inheritance?
+    In multiple inheritance, the derived class is derived from more than one base class. 
+    * What is polymorphism?
+    In programming, polymorphism means different or related classes that use the same names for their functions.
+    Polymorphism allows the ability to use a standard interface for multiple forms or data types.
+    * What is method resolution order or MRO?
+    Method Resolution Order (MRO) determines the order in which classes are searched when calling a method or accessing an 
+    attribute.
+
+
