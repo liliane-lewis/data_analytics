@@ -1,0 +1,13 @@
+URL: https://github.com/liliane-lewis/data_analytics/blob/main/Bootcamp/Week6/Day2/DailyChallangeWebAPItoDB.py
+suggestions for improvement:
+- Use parameterized queries to prevent SQL injection vulnerabilities.
+- Add error handling (e.g., `try...except` blocks) to handle potential exceptions during database operations and API requests.
+- Improve readability by adding more comments explaining the logic, especially around data extraction from the nested JSON response.
+- Consider using a more robust method for selecting random countries, accounting for the possibility of the API returning fewer than 10 countries.
+- The database connection details are hardcoded.  Consider using environment variables to store sensitive information like passwords.
+Brief justification:
+- correctness: The code successfully fetches data from the REST Countries API, selects 10 random countries, and inserts the specified attributes (name, capital, flag, subregion, population) into a PostgreSQL database table.  It directly addresses the core functionality described in the chapter content. However, it lacks error handling, which could lead to issues if the API is unavailable or the database operation fails. The score is reduced slightly due to the absence of comprehensive error handling.
+- readability: The code is generally well-structured and easy to follow. However, adding more comments, especially to explain the nested JSON structure handling, would significantly improve readability.  The variable names are descriptive, but additional comments would enhance understanding.
+- performance: The code's performance is reasonable for this task.  Fetching all countries and then randomly selecting 10 is efficient for a relatively small dataset.  However, for a significantly larger dataset, a more optimized approach might be necessary, such as using server-side filtering to reduce the data fetched from the API. The absence of error handling slightly lowers the performance score because errors could lead to incomplete or failed operations.
+- security: The code has a significant security vulnerability because it uses hardcoded database credentials.  This is a major security risk.  Also, while the code uses parameterized queries for the database insert, it doesn't account for potential errors in API responses (malformed JSON, network errors, etc.), which could leave it vulnerable to unexpected inputs and crashes. The use of parameterized queries mitigates SQL injection, but the hardcoded credentials significantly lower the security score.
+
